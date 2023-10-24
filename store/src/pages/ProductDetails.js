@@ -5,7 +5,7 @@ export default function ProductDetails() {
   const { id } = useParams();
 
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/products/" + id
+    "http://localhost:1337/api/products" + id
   );
 
   if (isLoading) return <p>Loading...</p>;
