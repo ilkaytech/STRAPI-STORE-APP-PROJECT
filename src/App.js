@@ -1,7 +1,11 @@
+/* -----------------------------
+    REACT STRAPİ | STORE API
+-------------------------------- */
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
 import ProductDetails from "./pages/ProductDetails";
 import Products from "./pages/Products";
+
+/* ----------------------------------------------------------------------- */
 
 export default function App() {
   return (

@@ -1,6 +1,12 @@
+/* -----------------------------
+    REACT STRAPİ | STORE API
+-------------------------------- */
+
 import { useParams } from "react-router-dom";
 import Review from "../components/Review";
 import useFetch from "../hooks/useFetch";
+
+/* ----------------------------------------------------------------------- */
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -11,6 +17,8 @@ export default function ProductDetails() {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
+
+  /* ----------------------------------------------------------------------- */
 
   return (
     <div className="container mx-auto p-12">

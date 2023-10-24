@@ -1,5 +1,11 @@
+/* -----------------------------
+    REACT STRAPİ | STORE API
+-------------------------------- */
+
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
+
+/* ----------------------------------------------------------------------- */
 
 export default function Products() {
   const { isLoading, error, data } = useFetch(
@@ -8,6 +14,8 @@ export default function Products() {
 
   if (isLoading) return <h1>Loading...</h1>;
   if (error) return <h1>Error: {error.message}</h1>;
+
+  /* ----------------------------------------------------------------------- */
 
   return (
     <div className="container mx-auto p-12">

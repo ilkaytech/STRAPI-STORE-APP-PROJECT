@@ -1,4 +1,10 @@
+/* -----------------------------
+    REACT STRAPİ | STORE API
+-------------------------------- */
+
 import { useEffect, useState } from "react";
+
+/* ----------------------------------------------------------------------- */
 
 export default function useFetch(url) {
   const [isLoading, setIsLoading] = useState(true);
@@ -8,7 +14,6 @@ export default function useFetch(url) {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-
       try {
         const res = await fetch(url);
         if (!res.ok) {
@@ -23,9 +28,10 @@ export default function useFetch(url) {
         setIsLoading(false);
       }
     };
-
     fetchData();
   }, [url]);
+
+  /* ----------------------------------------------------------------------- */
 
   return { isLoading, error, data };
 }

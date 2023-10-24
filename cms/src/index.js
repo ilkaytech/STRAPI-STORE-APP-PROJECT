@@ -1,4 +1,7 @@
-'use strict';
+"use strict";
+/* -----------------------------
+    REACT STRAPİ | STORE API
+-------------------------------- */
 
 module.exports = {
   /**

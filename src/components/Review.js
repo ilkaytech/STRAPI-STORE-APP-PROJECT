@@ -1,9 +1,14 @@
+/* -----------------------------
+    REACT STRAPİ | STORE API
+-------------------------------- */
+
 import { useCallback, useState } from "react";
+
+/* ----------------------------------------------------------------------- */
 
 export default function Review({ productId }) {
   const [userDisplayName, setUserDisplayName] = useState("");
   const [body, setBody] = useState("");
-
   const handleSubmit = useCallback(
     async (e) => {
       e.preventDefault();
@@ -20,12 +25,13 @@ export default function Review({ productId }) {
           },
         }),
       });
-
       setUserDisplayName("");
       setBody("");
     },
     [userDisplayName, body, productId]
   );
+
+  /* ----------------------------------------------------------------------- */
 
   return (
     <form
